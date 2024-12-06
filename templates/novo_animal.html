@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block conteudo%}
+    <div class="cadastro">
+<!--Form criar novo evento-->
+<form action="{{url_for('criar_animal')}}" method="POST">
+    <label >Nome do animal:</label>
+    <input type="text" name="form-nome_animal">
+    <label >Raça do animal:</label>
+    <input type="text" name="form-raca2">
+    <label >Ano de nascimento do animal:</label>
+    <input type="text" name="form-anoNasci2">
+    <br>
+    <button > Adicionar </button>
+    <button><a class="cancelar" href="{{url_for('animais')}}">Cancelar</a></button>
+</form>
+    </div>
+{% endblock conteudo%}

@@ -1,0 +1,13 @@
+<!--Uso de templates-->
+{% extends 'base.html' %}
+
+{% block conteudo%}
+    {% for item in lista_consultas %}
+        <div class="card_itens">
+        Data: {{item.data2}}<br>
+        Hora: {{item.hora2}}<br>
+        Minuto: {{item.minuto}}<br>
+            </div>
+    {% endfor%}
+
+{% endblock conteudo%}

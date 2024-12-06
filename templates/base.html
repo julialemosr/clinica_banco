@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/template.css">
+</head>
+<body>
+<div class="container">
+   <header>
+        <h2>CLÍNICA VETERINÁRIA <br> DOGS & DOGS</h2>
+   </header>
+   <nav>
+      <ul>
+          <br>
+          <div class="palavras">
+          <h2>TABELAS</h2>
+            </div>
+          <hr>
+          <li><a class="tabelas" href="{{ url_for('veterinarios') }}"><br>TABELA VETERINÁRIOS</a></li>
+          <hr>
+          <li><a class="tabelas" href="{{ url_for('motivos') }}"><br>TABELA MOTIVOS</a></li>
+          <hr>
+          <li><a class="tabelas" href="{{ url_for('consultas') }}"><br>TABELA CONSULTAS</a></li>
+          <hr>
+          <li><a class="tabelas" href="{{ url_for('clientes') }}"><br>TABELA CLIENTES</a></li>
+          <hr>
+          <li><a class="tabelas" href="{{ url_for('animais') }}"><br>TABELA ANIMAL</a></li>
+          <hr>
+          <br>
+          <div class="palavras">
+          <br>
+          <h2>CADASTRO</h2>
+              </div>
+          <hr>
+          <li><a class="tabelas" href="{{ url_for('criar_veterinario') }}"><br>ADICIONAR VETERINÁRIOS</a></li>
+          <hr>
+          <li><a class="tabelas" href="{{ url_for('criar_motivo') }}"><br>ADICIONAR MOTIVOS</a></li>
+          <hr>
+          <li><a class="tabelas" href="{{ url_for('criar_consulta') }}"><br>ADICIONAR CONSULTAS</a></li>
+          <hr>
+          <li><a class="tabelas" href="{{ url_for('criar_clientes') }}"><br>ADICIONAR CLIENTES</a></li>
+          <hr>
+          <li><a class="tabelas" href="{{ url_for('criar_animal') }}"><br>ADICIONAR ANIMAL</a></li>
+          <hr>
+          <br>
+      </ul>
+   </nav>
+
+<main>
+    {% for mensagem in get_flashed_messages()%}
+            {{mensagem}}
+    {% endfor %}
+
+    {% block conteudo%}
+    {% endblock%}
+</main>
+
+</div>
+</body>
+</html>

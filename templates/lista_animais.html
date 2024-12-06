@@ -1,0 +1,13 @@
+<!--Uso de templates-->
+{% extends 'base.html' %}
+
+{% block conteudo%}
+    {% for item in lista_animais %}
+        <div class="card_itens">
+        Nome: {{item.nome_animal}}<br>
+        Raça: {{item.raca2}}<br>
+        Ano_nacimento: {{item.anoNasci2}}<br>
+            </div>
+    {% endfor%}
+
+{% endblock conteudo%}

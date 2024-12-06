@@ -1,0 +1,13 @@
+<!--Uso de templates-->
+{% extends 'base.html' %}
+
+{% block conteudo%}
+    {% for item in lista_motivos %}
+        <div class="card_itens">
+        Nome: {{item.nome_motivo}}<br>
+        Valor: {{item.valor_motivo}}<br>
+        Categoria: {{item.motivo_categoria}}<br>
+            </div>
+    {% endfor%}
+
+{% endblock conteudo%}

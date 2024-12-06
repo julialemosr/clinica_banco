@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block conteudo%}
+
+    <div class="cadastro">
+<!--Form criar novo evento-->
+<form action="{{url_for('criar_motivo')}}" method="POST">
+    <label >Nome do motivo:</label>
+    <input type="text" name="form-nome_motivo">
+    <label >Valor do motivo:</label>
+    <input type="number" name="form-valor_motivo">
+     <label >Categoria do motivo:</label>
+    <input type="text" name="form-motivo_categoria">
+    <br>
+    <button > Adicionar </button>
+    <button><a class="cancelar" href="{{url_for('motivos')}}">Cancelar</a></button>
+</form>
+    </div>
+{% endblock conteudo%}

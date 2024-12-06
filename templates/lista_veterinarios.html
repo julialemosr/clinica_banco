@@ -1,0 +1,15 @@
+<!--Uso de templates-->
+{% extends 'base.html' %}
+
+{% block conteudo%}
+    {% for item in lista_veterinarios %}
+        <div class="card_itens">
+        Nome: {{item.nome_vet}}<br>
+        Salario: {{item.salario_vet}}<br>
+        CRMV: {{item.crmv_vet}}<br>
+        Valor_consulta: {{item.consulta_vet}}<br>
+        Id_veterinario: {{item.id_vet}}<br>
+            </div>
+    {% endfor%}
+
+{% endblock conteudo%}

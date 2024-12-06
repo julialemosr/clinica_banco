@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block conteudo%}
+
+    <div class="cadastro">
+<!--Form criar novo evento-->
+<form action="{{url_for('criar_consulta')}}" method="POST">
+    <label >Data da consulta:</label>
+    <input type="text" name="form-data2">
+    <label >Hora da consulta:</label>
+    <input type="text" name="form-hora2">
+    <label >Minutos da consulta:</label>
+    <input type="text" name="form-minuto">
+    <br>
+    <button > Adicionar </button>
+    <button><a class="cancelar" href="{{url_for('consultas')}}">Cancelar</a></button>
+</form>
+    </div>
+{% endblock conteudo%}
